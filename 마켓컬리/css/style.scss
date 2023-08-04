@@ -5,8 +5,13 @@
 		height: 800px;
 		background-color: #5f0080;
 		> .logo {
+<<<<<<< HEAD
 			padding: auto;
 			top: 80px;
+=======
+			position: absolute;
+			top: 88px;
+>>>>>>> feature/visual
 			left: 50%;
 			width: 193px;
 			background-image: url(../images/logo.png);
@@ -17,5 +22,9 @@
 				text-indent: -9999px;
 			}
 		}
+<<<<<<< HEAD
 	} //feader
+=======
+	} //header
+>>>>>>> feature/visual
 } //wrap
