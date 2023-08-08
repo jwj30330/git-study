@@ -4,13 +4,10 @@
   background-color: #5f0080;
 }
 #wrap > header > .logo {
-<<<<<<< HEAD
   padding: auto;
   top: 80px;
-=======
   position: absolute;
   top: 88px;
->>>>>>> feature/visual
   left: 50%;
   width: 193px;
   background-image: url(../images/logo.png);
