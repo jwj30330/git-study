@@ -1,0 +1,101 @@
+@charset "utf-8";
+#wrap {
+	width: 1120px;
+	margin: 0 auto;
+
+	> h1,
+	address {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100px;
+	}
+	> .slide {
+		overflow: hidden;
+		position: relative;
+		height: 450px;
+		border: 1px solid #000;
+		> .slide-container {
+			display: flex;
+
+			flex-flow: row nowrap;
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			//규칙은 left : -1120px * 인덱스번호
+			left: 0; //첫번째 -1120px*0
+			left: -1120px; //두번쨰 -1120px*1
+			left: -2240px; //세번쨰 -1120px*2
+			left: -3360px; //4번째 -1120px*3
+			left: -4480px; //5번째 -1120px*4
+
+			outline: 1px solid blue;
+			width: calc(1120px * 5);
+			> p {
+				width: 1120px;
+				outline: 1px solid red;
+
+				background-position: center center;
+				background-size: cover;
+				&:nth-child(1) {
+					background-image: url(../images/slide-1.jpg);
+				}
+				&:nth-child(2) {
+					background-image: url(../images/slide-2.jpg);
+				}
+				&:nth-child(3) {
+					background-image: url(../images/slide-3.jpg);
+				}
+				&:nth-child(4) {
+					background-image: url(../images/slide-4.jpg);
+				}
+				&:nth-child(5) {
+					background-image: url(../images/slide-5.jpg);
+				}
+				> a {
+					display: block;
+					height: 450px;
+					text-indent: -9999px;
+				}
+			}
+		}
+		> .slide-pagination {
+			position: absolute;
+			top: 50%;
+			right: 90px;
+			margin-top: -150px;
+			border: 1px solid #ccc;
+			> li {
+				width: 180px;
+				// outline: 1px solid blue;
+				&:nth-child(1) {
+					background-image: url(../images/indicator-1.jpg);
+				}
+				&:nth-child(2) {
+					background-image: url(../images/indicator-2.jpg);
+				}
+				&:nth-child(3) {
+					background-image: url(../images/indicator-3.jpg);
+				}
+				&:nth-child(4) {
+					background-image: url(../images/indicator-4.jpg);
+				}
+				&:nth-child(5) {
+					background-image: url(../images/indicator-5.jpg);
+				}
+				&.on > a, //활성화표시
+				&:hover > a {
+					border: 1px solid skyblue;
+					box-sizing: border-box;
+				}
+
+				> a {
+					display: block;
+					height: 60px;
+					text-indent: -9999px;
+				}
+			}
+		}
+	} //.slide
+} //wrap
